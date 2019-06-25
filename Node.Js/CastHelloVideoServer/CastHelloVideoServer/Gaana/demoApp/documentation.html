@@ -1,0 +1,580 @@
+<html>
+<head>
+<style type="text/css">
+.fontCss{font-size:14px;line-height:1.6}
+.jsonBLock{background-color:#F5F5F5;border:1px solid rgba(0, 0, 0, 0.2);padding-left:5px;font-size:12px}
+.well{
+	background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    position: fixed;
+	width:20%;
+	text-align:left
+}
+.nav {
+    list-style: none outside none;
+    margin-bottom: 18px;
+    margin-left: 0;
+}
+
+.nav-list {
+    margin-bottom: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.nav-list
+li {
+    line-height: 18px;
+}
+.nav-list a.active:hover {
+    background-color: #3995CD;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.nav-list a:hover {
+    background-color: grey;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.nav-list > li {
+	line-height:30px
+}
+.nav-list > li > a {
+    cursor: pointer;
+    padding: 3px 15px;
+}
+
+.nav-list > li > a {
+    cursor: pointer;
+    padding: 3px 15px;
+    color: #3995CD;
+    text-decoration: none;
+}
+.nav-list > li > a, .nav-list .nav-header {
+    margin-left: -15px;
+    margin-right: -15px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+</style>
+</head>
+<body style ="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+	<div style="width:100%;float:left">
+		<div>
+			<div style="width:30%; vertical-align: top;float:left;">
+				<div style="width:100%;text-align:left: margin-left:10px;position: fixed;"><img src="http://gaana.com/images/logo.png"></div>
+				<div style="padding: 8px 0;margin-top:30px" class="well">
+				<div style="width:100%;display:none">Test Div</div>
+					 <ul class="nav nav-list">
+						 <li><a href="#1">Getting Started</a></li>
+						 <li><a href="#2">Authentication</a></li>
+						 <li><a href="#3">Language Options</a></li>
+						 <li><a href="#4">Creating an App</a></li>
+						 <li><a href="#5">Gaana URIs</a></li>
+						 <li><a href="#6">Process of using this URL</a></li>
+						 <li><a href="#7">Songs</a></li>
+						 <li><a href="#8">Album</a></li>
+						 <li><a href="#9">Artist</a></li>
+						 <li><a href="#10">Playlist</a></li>
+						 <li><a href="#11">Parameters</a></li>
+						 <!--<li><a href="#9">Functionality of Buttons</a></li>-->
+						 <li><a href="#12">Debugging</a></li>
+						 <li><a href="#13">Performance</a></li>
+					 </ul>
+				</div>
+			</div>
+			<div style="width:70%;float:right;margin-bottom:40px">
+				<h2 style="font-weight:bold;width:100%;margin-top:30px;">Developer Guidelines</h2>
+				<h3 style="font-weight:bold;width:100%;margin-top:30px;"><a name="1"></a>Getting Started</h3>
+				<div class="fontCss">
+					
+					Gaana.com is a commercial music streaming service providing free and licensed music. Gaana Apps provides both Indian and International music tracks. Gaana has released its api's which made it asy for developers to discover and experience music in his own applications.
+					At the heart of the Music API is an extensive database of information about albums. The Music API expands on Album data with collections of Song, Release, Composition, and Performance. Taken together, these collections of data provide entertainment information that will satisfy everyone from the casual consumer to the most avid music connoisseur.
+
+					<!--Gaana Apps use HTML, CSS and JavaScript and PHP, which makes it easy for you to integrate and produce an app quickly.-->
+				</div>
+				<h3 style="font-weight:bold;width:100%;margin-top:30px;"><a name="2"></a>Authentication</h3>
+				<div class="fontCss">
+				The API uses three different levels of authentication, depending on the method.
+				<li><b>None:</b> No authentication. Anybody can query the method.</li>
+				<li><b>API key:</b> Requires an API key.<br>
+					&nbsp;&nbsp;Example: api_key=PyezS3Q4Smivb24d9SzZGYSuh--IaMfAkE
+				</li>
+				<li><b>Login Authentication:</b> Requires sign in  process to complete before query the api.</li>
+				</div>
+				<h3 style="font-weight:bold;width:100%;margin-top:30px;"><a name="3"></a>Language Options</h3>
+				<div class="fontCss">
+					There are a list of languages which will help developers to pick and start working with their favourite language. You can also start developing by your any other favourite language which we have not mentioned here.<br>
+					<li><b>Javascript</b></li>
+					<li><b>PHP</b></li>
+					<li><b>Ruby</b></li>
+					<li><b>Java</b></li>
+					<li><b>Dot Net(C#)</b></li>
+				</div>
+				<h3><a name="4"></a>Creating an App</h3>
+				<div class="fontCss">
+				Developing an app is very easy. First, create the gaana folder, which is the workspace where you place your apps:<br><br>
+				<li>htdocs/gaana(Windows)</li><br><br>
+				The basic files are:<br>
+				<li><b>index.html</b>: This is required in all applications, and is the first page that will be displayed by Gaana when your application is loaded.</li>
+				<li><b>app.js</b>: This is the main javascript file to get JSON data from API and responsible to diplay them on HTMl page.</li>
+				<li><b>get.php</b>: This is the main PHP page to hit Gaana API's and request for play lists and songs</li>
+				<li><b>constant.php</b>: This page contains constants variable which are used globally in other php files like BASE_URL </li>
+				<li><b>app.css</b>: This page contains all styles which are used in our application for better look and feel. </li>
+				<br>
+				Other files:<br>
+				<li><b>jquery-1.7.2.min.js</b>: This is the main js  file which allowed us to use jquery functions to do javascript programming.</li>
+				<li><b>jsPlayer.js</b>: Including this file we are able to play songs using players.</li>
+				<li><b>jquery-ui.css</b>: jQuery UI includes a robust CSS Framework designed for building custom jQuery widgets.</li>
+				<li><b>GetClass.php</b>: This is the supporting file for sending get request to Gaana API </li>
+				<li><b>GetTracks.php</b>: This is the supporting file of GetClass.php to process and load data of Songs category. </li>
+				<li><b>GetAlbums.php</b>: This is the supporting file of GetClass.php to process and load data of Albums category. </li>
+				<li><b>GetArtists.php</b>: This is the supporting file of GetClass.php to process and load data of Artists category.</li>
+				<li><b>GetPlaylists.php</b>: This is the supporting file of GetClass.php to process and load data of Playlist category.</li>
+				</div>
+				<h3 style="font-weight:bold;width:100%;margin-top:30px;"><a name="5"></a>Gaana URIs</h3>
+				<div class="fontCss">
+					http://s.staging.api.gaana.com<br>
+					This URI is used to get songs details and load them in our application. We used one constant variable for above url "SERVICEBASEURL".<br>
+					
+					<h3 style="font-weight:bold;width:100%;margin-top:30px;"><a name="6"></a>Process of using this URL</h3>
+					We have added multiple categories to display songs. These categories are used to display filtered list based on their type.<br>
+					Main categories are:
+					<li><b><a name="7">Songs</b>: This category contains list of all songs. This category is further categorised in to sub categories Most Popular and Hot Songs.<br><br>
+					
+						Example for Most Popular :<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=song&subtype=most_popular"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">"tracks":<br>
+							[<br>
+							{<br>
+							"track_id":"1586458",<br>
+							"seokey":"malang-1",<br>
+							"albumseokey":"dhoom-3",<br>
+							"track_title":"Malang",<br>
+							"album_id":"143145",<br>
+							"album_title":"Dhoom : 3",<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_80x80_143145.jpg",<br>
+							"artwork_large":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_480x480_143145.jpg",<br>
+							"artist":[{"artist_id":"144","name":"Shilpa Rao"},{"artist_id":"141849","name":"Siddharth Mahadevan"}],<br>
+							"gener":[{"genre_id":"238","name":"Hindi"}],<br>
+							"popularity":"2547881~87495",<br>
+							"rating":"0",<br>
+							"stream_type":"rtmp",<br>
+							"duration":"0.19166666",<br>
+							"isrc":"IN-Y09-13-00051",<br>
+							"is_most_popular":0,<br>
+							"track_format":{"mp3":{"normal":"0","medium":"1","high":"1","extreme":"1"},"mp4_aac":{"normal":"0","medium":"0","high":"0","extreme":"0"}},<br>
+							"rtmp":"1",<br>
+							"http":"0",<br>
+							"https":"0",<br>
+							"rtsp":"1",<br>
+							"display_global":"0"<br>
+							},<br>
+							{....}<br>
+							]
+						</div><br><br>
+						Example for Hot Songs :<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=song&subtype=hot_songs"<br><br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"tracks":<br>
+							[<br>
+							{<br>
+							"track_id":"1467503",<br>
+							"seokey":"gulabi-1",<br>
+							"albumseokey":"shuddh-desi-romance",<br>
+							"track_title":"Gulabi",<br>
+							"album_id":"132465",<br>
+							"album_title":"Shuddh Desi Romance",<br>
+							"artwork":<br>
+							"http:\/\/static.gaana.com\/images\/albums\/65\/132465\/crop_80x80_132465.jpg",<br>
+							"artwork_large":"http:\/\/static.gaana.com\/images\/albums\/65\/132465\/crop_480x480_132465.jpg",<br>
+							"artist":[{"artist_id":"47372","name":"Jigar Saraiya"},<br>
+							{"artist_id":"194425","name":"Priya Saraiya"}],<br>
+							"gener":[{"genre_id":null,"name":""}],<br>
+							"popularity":"2328479~363011",<br>
+							"rating":"0",<br>
+							"stream_type":"rtmp",<br>
+							"duration":"230","isrc":"IN-Y09-13-00039",<br>
+							"track_format":{"mp3":{"normal":"0","medium":"1","high":"1","extreme":"1"},<br>
+							"mp4_aac":{"normal":"0","medium":"0","high":"0","extreme":"0"}},<br>
+							"rtmp":"1","http":"1","https":"0","rtsp":"0","display_global":"0"<br>
+							},<br>
+							{....}<br>
+							]
+							
+						</div>
+					</li><br>
+					<li><b><a name="8">Album</b>: This category contains list of albums which comes under sub category Most Popular, New Released Albums and All Albums.<br><br>
+					
+						Example for Most Popular :<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=album&subtype=most_popular"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"album":<br>
+							[<br>
+							{<br>
+							"album_id":"143145",<br>
+							"seokey":"dhoom-3",<br>
+							"title":"Dhoom : 3",<br>
+							"language":"Hindi",<br>
+							"rating":"0",<br>
+							"duration":"1",<br>
+							"release_date":"2013-12-09",<br>
+							"trackcount":"8",<br>
+							"recordlevel":"YRF Music",<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_80x80_143145.jpg",<br>
+							"primaryartist":[{"artist_id":"","name":""}],<br>
+							"artist":<br>
+							&nbsp;[{"artist_id":"144","name":"Shilpa Rao"},<br>
+							&nbsp;{"artist_id":"141849","name":"Siddharth Mahadevan"},<br>
+							&nbsp;{"artist_id":"12","name":"Sunidhi Chauhan"},<br>
+							&nbsp;{"artist_id":"199","name":"Mohit Chauhan"},<br>
+							&nbsp;{"artist_id":"412","name":"Aditi Singh Sharma"},<br>
+							&nbsp;{"artist_id":"205793","name":"Shivam Mahadevan"},<br>
+							&nbsp;{"artist_id":"205794","name":"Anish Sharma"},<br>
+							&nbsp;{"artist_id":"33","name":"Instrumental"},<br>
+							&nbsp;{"artist_id":"172188","name":"Naya"}],<br>
+							"gener":[{"gener_id":"238","name":"Hindi"}],<br>
+							"trackids":"1586458,1586460,1586461,1586463,1586466,1586468,1586470,1586473",<br>
+							"custom_artworks":<br>
+							{<br>
+							&nbsp;"40x40":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_40x40_143145.jpg",<br>
+							&nbsp;"80x80":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_80x80_143145.jpg",<br>
+							&nbsp;"110x110":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_110x110_143145.jpg",<br>
+							&nbsp;"175x175":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_175x175_143145.jpg",<br>
+							&nbsp;"480x480":"http:\/\/static.gaana.com\/images\/albums\/45\/143145\/crop_480x480_143145.jpg"<br>
+							&nbsp;}<br>
+							},<br>
+							{....}<br>
+							]
+						</div><br><br>
+						Example for New Released Albums :<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=album&subtype=new_release"<br><br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"album":<br>
+							[<br>
+							{<br>
+							"album_id":"147491",<br>
+							"seokey":"dil-ka-mizaaj-ishqiya-dedh-ishqiya",<br>
+							"title":"Dil Ka Mizaaj Ishqiya-Dedh Ishqiya",<br>
+							"language":"Hindi","rating":"0","duration":"382","release_date":"2013-12-15","trackcount":"1","recordlevel":"Shemaroo Entertainment Ltd",<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_80x80_147491.jpg",<br>
+							"primaryartist":[{"artist_id":"","name":""}],<br>
+							"artist":[{"artist_id":"265","name":"Rahat Fateh Ali Khan"}],<br>
+							"gener":[{"gener_id":"5","name":"Romantic"}],<br>
+							"trackids":"1624497",<br>
+							"custom_artworks":<br>
+							&nbsp;{<br>
+							&nbsp;"40x40":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_40x40_147491.jpg",<br>
+							&nbsp;"80x80":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_80x80_147491.jpg",<br>
+							&nbsp;"110x110":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_110x110_147491.jpg",<br>
+							&nbsp;"175x175":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_175x175_147491.jpg",<br>
+							&nbsp;"480x480":"http:\/\/static.gaana.com\/images\/albums\/91\/147491\/crop_480x480_147491.jpg"<br>
+							&nbsp;}<br>
+							},<br>
+							{....}<br>
+							]
+							
+						</div><br><br>
+						Example for All Albums :<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=album&subtype=all_albums"<br><br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"album":<br>
+							[<br>
+							{<br>
+							"album_id":"72034",<br>
+							"seokey":"ley-lines",<br>
+							"title":"Ley Lines",<br>
+							"language":null,"rating":"0",<br>
+							"duration":"3286",<br>
+							"release_date":"0000-00-00",<br>
+							"trackcount":"11",<br>
+							"recordlevel":"Times Music",<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_80x80_72034.jpg",<br>
+							"primaryartist":[{"artist_id":"","name":""}],<br>
+							"artist":<br>
+							[{"artist_id":"143102","name":"Ustad Fazal Qureshi"},<br>
+							{"artist_id":"143103","name":"Anders Hagbers"},<br>
+							{"artist_id":"143104","name":"Ahmad Al Khatib"}],<br>
+							"gener":[{"gener_id":"151","name":"Fusion"}],<br>
+							"trackids":"710481,710482,710483,710484,710485,710486,710487,710488,710489,710490,710491",<br>
+							"custom_artworks":{"40x40":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_40x40_72034.jpg",<br>
+							"80x80":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_80x80_72034.jpg",<br>
+							"110x110":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_110x110_72034.jpg",<br>
+							"175x175":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_175x175_72034.jpg",<br>
+							"480x480":"http:\/\/static.gaana.com\/images\/albums\/34\/72034\/crop_480x480_72034.jpg"<br>
+							}<br>
+							},<br>
+							{....}<br>
+							]
+							
+						</div>
+						
+						</li><br>
+					<li><b><a name="9">Artist</b>: This category contains list of songs categorised on the basis of artist. Artist is then sub categorised into Most Popular Artist, List of Artist, Artist Tracking List and Artist Album.<br><br>
+					Example for Most Popular Artist:<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=artist&subtype=most_popular"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"artist":<br>
+							[<br>
+							{<br>
+							"artist_id":"1053",<br>
+							"seokey":"r-d-burman",<br>
+							"name":"R D Burman",<br>
+							"rating":"4.4",<br>
+							"songs":"1889",<br>
+							"albums":"476",<br>
+							"description":null,<br>
+							"gener":<br>
+							&nbsp;[<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"25","name":"Tamil"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"26",<br>
+							&nbsp;"name":"Urdu"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"27",<br>
+							&nbsp;"name":"Hindi Film"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"28",<br>
+							&nbsp;"name":"Bengali"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"36",<br>
+							&nbsp;"name":"Oriya"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"47",<br>
+							&nbsp;"name":"Instrumental"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"56",<br>
+							&nbsp;"name":"Bollywood"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"59",<br>
+							&nbsp;"name":"Pop"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"67",<br>
+							&nbsp;"name":"Dance"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"70",<br>
+							&nbsp;"name":"Soundtrack"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"90",<br>
+							&nbsp;"name":"Indipop"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"148",<br>
+							&nbsp;"name":"Ghazals"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"192",<br>
+							&nbsp;"name":"Children"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"196",<br>
+							&nbsp;"name":"dialogue"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"238",<br>
+							&nbsp;"name":"Hindi"<br>
+							&nbsp;}<br>
+							&nbsp;],<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/artists\/53\/1053\/crop_80x80_1053.jpg"<br>
+							},<br>
+							{....}<br>
+							]
+						
+						</div><br><br>
+						Example for List of Artist:<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=artist&subtype=artist_list"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"artist":<br>
+							[<br>
+							{<br>
+							"artist_id":"55962",<br>
+							"seokey":"ar-rahman",<br>
+							"name":"A.R. Rahman",<br>
+							"rating":"1",<br>
+							"songs":"696",<br>
+							"albums":"200",<br>
+							"description":null,<br>
+							"gener":<br>
+							&nbsp;[<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"25",<br>
+							&nbsp;"name":"Tamil"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"27",<br>
+							&nbsp;"name":"Hindi Film"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"30",<br>
+							&nbsp;"name":"Telugu"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"56",<br>
+							&nbsp;"name":"Bollywood"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"59",<br>
+							&nbsp;"name":"Pop"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"62",<br>
+							&nbsp;"name":"Rock "<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"70",<br>
+							&nbsp;"name":"Soundtrack"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"90",<br>
+							&nbsp;"name":"Indipop"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"148",<br>
+							&nbsp;"name":"Ghazals"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"206",<br>
+							&nbsp;"name":"classical"<br>
+							&nbsp;},<br>
+							&nbsp;{<br>
+							&nbsp;"genre_id":"512",<br>
+							&nbsp;"name":"Soundtrack (Other)"<br>
+							&nbsp;}<br>
+							&nbsp;],<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/artists\/62\/55962\/crop_80x80_55962.jpg"},<br>
+							{....}<br>
+							]
+						
+						</div>
+					</li><br>
+					<li><b><a name="10">Playlist</b>: This category contains list of songs and albums categorised on the basis of playlists. Playlist is then sub categorised into Most Popular Playlist, Playlist Home featured and User Playlist.
+					<br><br>
+					Example for Most Popular Playlist:<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=playlist&subtype=most_popular_playlist"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"playlist":<br>
+							[<br>
+							{<br>
+							"playlist_id":"561628",<br>
+							"seokey":"gaana-dj-us-top-50",<br>
+							"title":"US Top 50",<br>
+							"user_id":"0",<br>
+							"trackids":null,<br>
+							"popularity":"221638~221638",<br>
+							"tagline":null,<br>
+							"createdby":"Gaana",<br>
+							"action":"0",<br>
+							"rating":null,<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/playlists\/28\/561628\/crop_80x80_561628.jpg"},<br>
+							{....}<br>
+							]
+						</div><br><br>
+						Example for Playlist Home Featured:<br>
+						Request URL:   SERVICEBASEURL."/index.php?type=playlist&subtype=playlist_home_featured"<br>
+						Output JSON:<br>
+						<div class ="jsonBLock">
+							"playlist":<br>
+							[<br>
+							{<br>
+							"playlist_id":"805776",<br>
+							"seokey":"gaana-dj-tamil-top-20",<br>
+							"title":"Tamil Top 20",<br>
+							"user_id":"0",<br>
+							"trackids":"1479511,1507904,1479514,1484786,1469304,1236558,1243344,1236557,<br>1460075,1243339,1402125,1402124,1402126,1243341,1306491,1306487,1402129,1479510,1465164,1464125",<br>
+							"popularity":"699885",<br>
+							"tagline":"",<br>
+							"createdby":"Gaana",<br>
+							"action":null,<br>
+							"rating":"0",<br>
+							"artwork":"http:\/\/static.gaana.com\/images\/playlists\/76\/805776\/crop_80x80_805776.jpg"<br>
+							},<br>
+							{....}<br>
+							]
+						</div>
+					</li><br>
+					
+				</div>
+				<!--<h3><a name="9">Functionality of Buttons</h3>
+				<div class="fontCss">
+					<li><b>Play Button</b>: This button is used to Play/Pause song tracks. We have used streaming API to play songs.<br>
+					Request URL:
+				</div> -->
+				<h3><a name="11"></a>Parameters</h3>
+				<div class="fontCss">
+					<li>
+					<b>type:</b> 
+					This is the main parameter which contains values like songs, artist, albums, playlist. Its value filters the reponse result based on types of songs, like so:<br>
+					http://s.staging.api.gaana.com/type=playlist
+					</li>
+					<li>
+					<b>subtype:</b> 
+					Subtype is the parameter whose value sub categorize the API result response into most popular, hot songs and other sub categories, like so:<br>
+					http://s.staging.api.gaana.com/type=playlist&subtype=most_popular_playlist	
+					</li>
+					<li>
+					<b>token:</b> 
+					This is the parameter which is if provided then API will return user specific information. This parameter is optional.
+					</li>
+					<li>
+					<b>format:</b> 
+					This parameter value could be json. This parameter is optional.
+					</li>
+					<li>
+					<b>order:</b> 
+					Data returned from the database will not be in ordered format untill we will not pass one parameter in query string for defining order of data. The order can be defined in 24hrs, week, month or alltime. By default it is set to week.
+					</li>
+					<li>
+					<b>limit:</b>
+					All results are paginated and set to a limit of 20 per page by default. This can be set directly via a 'limit' query string parameter, bydefault it is 40, like so:
+					</li>
+					There are some more parameters other than the parameters passed to get data from Gaana database.
+					
+					 <br>
+					
+				</div>
+				<h3><a name="12">Debugging</h3>
+				<div class="fontCss">
+					You can use your browser developer tools to debug your web app. Please know that the web inspector will only show errors/warnings in HTML/JS land - more errors may lurk behind the scenes.
+
+					Use the console log to find out if your application is violating the sandbox, exceptions are thrown, etc. If you are using the desktop client, open the Inspector. You can do it right-clicking and clicking on Show Inspector or opening the Develop > Show Inspector menu item. If you are developing on a browser, it is likely that it will have a console integrated in its Developer Tools. Please check the documentation for your particular browser.
+				</div>
+				
+				<h3><a name="13">Performance</h3>
+				<div class="fontCss">
+					As a web application, you can apply web performance optimization techniques to deliver the best experience to the users of your app:
+					<li>Load CSS before Javascript files.</li>
+					<li>Write performant CSS and Javascript. For instance, use efficient CSS selectors and minimize DOM manipulation.</li>
+					<li>Try to make the most out of browser capabilities, being sensible when using libraries.</li>
+					<li>Try to minimize the size of your bundle by only including the needed resources.</li>
+					<li>Optimize the bundled images.</li>
+					<br>
+					We recommend you to use the developer tools that come built-in with browsers to measure performance.
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

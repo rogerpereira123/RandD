@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>CastHelloVideoServer</Name>
+    <RootNamespace>CastHelloVideoServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>100b887f-71cd-47de-bbc8-c50e0b20b3e5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CastHelloVideo-chrome-master\helloVideos.js" />
+    <Compile Include="Gaana\demoApp\js\app.js" />
+    <Compile Include="Gaana\demoApp\js\jquery-1.7.2.min.js" />
+    <Compile Include="Gaana\demoApp\js\jquery.json.js" />
+    <Compile Include="Gaana\demoApp\js\jsPlayer.js" />
+    <Compile Include="Gaana\demoApp\js\jsPlayerLayout.js" />
+    <Compile Include="Gaana\demoApp\js\jsPlayerSWFObject.js" />
+    <Compile Include="server.js" />
+    <Content Include="CastHelloVideo-chrome-master\CONTRIBUTING.md" />
+    <Content Include="CastHelloVideo-chrome-master\css\demo.css" />
+    <Content Include="CastHelloVideo-chrome-master\images\bunny.jpg" />
+    <Content Include="CastHelloVideo-chrome-master\images\casticon.on.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\cast_icon_active.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\cast_icon_error.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\cast_icon_idle.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\cast_icon_warning.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\ed.jpg" />
+    <Content Include="CastHelloVideo-chrome-master\images\fullscreen.png" />
+    <Content Include="CastHelloVideo-chrome-master\images\google-io-2011.jpg" />
+    <Content Include="CastHelloVideo-chrome-master\images\reel.jpg" />
+    <Content Include="CastHelloVideo-chrome-master\images\Tears.jpg" />
+    <Content Include="CastHelloVideo-chrome-master\index.html" />
+    <Content Include="CastHelloVideo-chrome-master\LICENSE" />
+    <Content Include="CastHelloVideo-chrome-master\README.md" />
+    <Content Include="Gaana\demoApp\css\.svn\all-wcprops" />
+    <Content Include="Gaana\demoApp\css\.svn\entries" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\1024.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\10cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\11cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\12cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\2cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\3cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\480.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\4cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\5cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\6cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\768.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\7cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\8cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\9cols.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\col.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\html5reset.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\jquery-ui-1.10.2.custom.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\jquery-ui.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\jquery.slider.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\player.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\.svn\text-base\responsivegridsystem.css.svn-base" />
+    <Content Include="Gaana\demoApp\css\1024.css" />
+    <Content Include="Gaana\demoApp\css\10cols.css" />
+    <Content Include="Gaana\demoApp\css\11cols.css" />
+    <Content Include="Gaana\demoApp\css\12cols.css" />
+    <Content Include="Gaana\demoApp\css\2cols.css" />
+    <Content Include="Gaana\demoApp\css\3cols.css" />
+    <Content Include="Gaana\demoApp\css\480.css" />
+    <Content Include="Gaana\demoApp\css\4cols.css" />
+    <Content Include="Gaana\demoApp\css\5cols.css" />
+    <Content Include="Gaana\demoApp\css\6cols.css" />
+    <Content Include="Gaana\demoApp\css\768.css" />
+    <Content Include="Gaana\demoApp\css\7cols.css" />
+    <Content Include="Gaana\demoApp\css\8cols.css" />
+    <Content Include="Gaana\demoApp\css\9cols.css" />
+    <Content Include="Gaana\demoApp\css\col.css" />
+    <Content Include="Gaana\demoApp\css\html5reset.css" />
+    <Content Include="Gaana\demoApp\css\jquery-ui-1.10.2.custom.css" />
+    <Content Include="Gaana\demoApp\css\jquery-ui.css" />
+    <Content Include="Gaana\demoApp\css\jquery.slider.css" />
+    <Content Include="Gaana\demoApp\css\player.css" />
+    <Content Include="Gaana\demoApp\css\responsivegridsystem.css" />
+    <Content Include="Gaana\demoApp\documentation.html" />
+    <Content Include="Gaana\demoApp\get.php" />
+    <Content Include="Gaana\demoApp\hash.php" />
+    <Content Include="Gaana\demoApp\hashcheck.php" />
+    <Content Include="Gaana\demoApp\images\.svn\all-wcprops" />
+    <Content Include="Gaana\demoApp\images\.svn\entries" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\bodyback.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\css3-logo.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\footerback.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\glass.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\hot_box_div.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\html5-logo.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\loader.gif.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\player_icon_states.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen10.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen2.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen3.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen4.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen5.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen6.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen7.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen8.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\screen9.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\song_played_bg.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\sprities.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\ui-bg_flat_75_ffffff_40x100.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\ui-bg_glass_65_ffffff_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\ui-bg_glass_75_dadada_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\ui-bg_glass_75_e6e6e6_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\prop-base\ui-bg_highlight-soft_75_cccccc_1x100.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\bodyback.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\css3-logo.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\footerback.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\glass.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\hot_box_div.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\html5-logo.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\loader.gif.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\player_icon_states.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen10.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen2.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen3.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen4.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen5.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen6.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen7.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen8.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\screen9.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\song_played_bg.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\sprities.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\ui-bg_flat_75_ffffff_40x100.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\ui-bg_glass_65_ffffff_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\ui-bg_glass_75_dadada_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\ui-bg_glass_75_e6e6e6_1x400.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\.svn\text-base\ui-bg_highlight-soft_75_cccccc_1x100.png.svn-base" />
+    <Content Include="Gaana\demoApp\images\bodyback.png" />
+    <Content Include="Gaana\demoApp\images\footerback.png" />
+    <Content Include="Gaana\demoApp\images\glass.png" />
+    <Content Include="Gaana\demoApp\images\hot_box_div.png" />
+    <Content Include="Gaana\demoApp\images\loader.gif" />
+    <Content Include="Gaana\demoApp\images\player_icon_states.png" />
+    <Content Include="Gaana\demoApp\images\screen10.png" />
+    <Content Include="Gaana\demoApp\images\screen2.png" />
+    <Content Include="Gaana\demoApp\images\screen3.png" />
+    <Content Include="Gaana\demoApp\images\screen4.png" />
+    <Content Include="Gaana\demoApp\images\screen5.png" />
+    <Content Include="Gaana\demoApp\images\screen6.png" />
+    <Content Include="Gaana\demoApp\images\screen7.png" />
+    <Content Include="Gaana\demoApp\images\screen8.png" />
+    <Content Include="Gaana\demoApp\images\screen9.png" />
+    <Content Include="Gaana\demoApp\images\song_played_bg.png" />
+    <Content Include="Gaana\demoApp\images\sprities.png" />
+    <Content Include="Gaana\demoApp\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Gaana\demoApp\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Gaana\demoApp\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Gaana\demoApp\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Gaana\demoApp\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Gaana\demoApp\index.html" />
+    <Content Include="Gaana\demoApp\js\.svn\all-wcprops" />
+    <Content Include="Gaana\demoApp\js\.svn\entries" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\app.js.svn-base" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\jquery-1.7.2.min.js.svn-base" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\jquery.json.js.svn-base" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\jsPlayer.js.svn-base" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\jsPlayerLayout.js.svn-base" />
+    <Content Include="Gaana\demoApp\js\.svn\text-base\jsPlayerSWFObject.js.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\all-wcprops" />
+    <Content Include="Gaana\demoApp\php\.svn\entries" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\constants.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\GetAlbums.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\GetArtists.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\GetClass.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\GetPlaylists.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\GetTracks.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\.svn\text-base\utilities.php.svn-base" />
+    <Content Include="Gaana\demoApp\php\constants.php" />
+    <Content Include="Gaana\demoApp\php\GetAlbums.php" />
+    <Content Include="Gaana\demoApp\php\GetArtists.php" />
+    <Content Include="Gaana\demoApp\php\GetClass.php" />
+    <Content Include="Gaana\demoApp\php\GetPlaylists.php" />
+    <Content Include="Gaana\demoApp\php\GetTracks.php" />
+    <Content Include="Gaana\demoApp\php\utilities.php" />
+    <Content Include="Gaana\demoApp\swf\.svn\all-wcprops" />
+    <Content Include="Gaana\demoApp\swf\.svn\entries" />
+    <Content Include="Gaana\demoApp\swf\.svn\prop-base\GaanaPlayerV2_v50.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\prop-base\GaanaPlayerV2_v52.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\prop-base\GaanaPlayerV2_v53.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\prop-base\playerProductInstall.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\text-base\GaanaPlayerV2_v50.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\text-base\GaanaPlayerV2_v52.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\text-base\GaanaPlayerV2_v53.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\.svn\text-base\playerProductInstall.swf.svn-base" />
+    <Content Include="Gaana\demoApp\swf\GaanaPlayerV2_v53.swf" />
+    <Content Include="Gaana\demoApp\swf\playerProductInstall.swf" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CastHelloVideo-chrome-master\" />
+    <Folder Include="CastHelloVideo-chrome-master\css\" />
+    <Folder Include="CastHelloVideo-chrome-master\images\" />
+    <Folder Include="Gaana\" />
+    <Folder Include="Gaana\demoApp\" />
+    <Folder Include="Gaana\demoApp\css\" />
+    <Folder Include="Gaana\demoApp\css\.svn\" />
+    <Folder Include="Gaana\demoApp\css\.svn\text-base\" />
+    <Folder Include="Gaana\demoApp\images\" />
+    <Folder Include="Gaana\demoApp\images\.svn\" />
+    <Folder Include="Gaana\demoApp\images\.svn\prop-base\" />
+    <Folder Include="Gaana\demoApp\images\.svn\text-base\" />
+    <Folder Include="Gaana\demoApp\js\" />
+    <Folder Include="Gaana\demoApp\js\.svn\" />
+    <Folder Include="Gaana\demoApp\js\.svn\text-base\" />
+    <Folder Include="Gaana\demoApp\php\" />
+    <Folder Include="Gaana\demoApp\php\.svn\" />
+    <Folder Include="Gaana\demoApp\php\.svn\text-base\" />
+    <Folder Include="Gaana\demoApp\swf\" />
+    <Folder Include="Gaana\demoApp\swf\.svn\" />
+    <Folder Include="Gaana\demoApp\swf\.svn\prop-base\" />
+    <Folder Include="Gaana\demoApp\swf\.svn\text-base\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

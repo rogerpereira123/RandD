@@ -1,0 +1,1 @@
+select * from internalworkorder where techcode in ('2124' , '1889','1475','2344' , '3400') and scheduleddate  = '01/10/2008'

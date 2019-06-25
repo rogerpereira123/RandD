@@ -1,0 +1,19 @@
+delete tbl_InvTxnLine 
+delete tbl_InvTxnInward
+delete tbl_InvTxnIn2OutUnit
+delete tbl_InvTxnIn2Out
+delete tbl_InvTxnLinePOLine
+delete tbl_InvTxnLinePRLine
+delete tbl_InvTxnLineWOLine
+delete tbl_InvTxnOut2In
+delete tbl_InvTxnOut2InUnit
+delete tbl_InvTxnOutward
+delete tbl_InvTxnTransfer
+delete tbl_InvTxnUnit
+delete tbl_POLinePRLine
+delete tbl_Poline
+delete tbl_Po
+delete tbl_PRLine
+delete tbl_Pr
+delete tbl_InvTxn
+delete from tbl_raed

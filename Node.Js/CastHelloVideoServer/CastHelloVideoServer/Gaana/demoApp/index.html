@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	
+
+	<title>Gaana Demo App</title>
+	<meta name="description" content="Gaana Demo App" />
+	<meta http-equiv="cleartype" content="on" />
+
+	<link rel="shortcut icon" href="./favicon.ico" />
+
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="./css/html5reset.css" media="all" />
+	<link rel="stylesheet" href="./css/responsivegridsystem.css" media="all" />
+	<link rel="stylesheet" href="./css/col.css" media="all" />
+	<link rel="stylesheet" href="./css/2cols.css" media="all" />
+	<link rel="stylesheet" href="./css/3cols.css" media="all" />
+	<link rel="stylesheet" href="./css/4cols.css" media="all" />
+	<link rel="stylesheet" href="./css/5cols.css" media="all" />
+	<link rel="stylesheet" href="./css/6cols.css" media="all" />
+	<link rel="stylesheet" href="./css/7cols.css" media="all" />
+	<link rel="stylesheet" href="./css/8cols.css" media="all" />
+	<link rel="stylesheet" href="./css/9cols.css" media="all" />
+	<link rel="stylesheet" href="./css/10cols.css" media="all" />
+	<link rel="stylesheet" href="./css/11cols.css" media="all" />
+	<link rel="stylesheet" href="./css/12cols.css" media="all" />
+
+	<!-- Responsive Stylesheets -->
+	<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="./css/1024.css" />
+	<link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="./css/768.css" />
+	<link rel="stylesheet" media="only screen and (max-width: 480px)" href="./css/480.css" />
+	<!-- <link rel="stylesheet" href="./css/jquery-ui.css" /> -->
+	<link rel="stylesheet" href="./css/jquery.slider.css" />
+	<link rel="stylesheet" href="./css/jquery-ui-1.10.2.custom.css" />
+	<link rel="stylesheet" href="./css/player.css" />
+	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
+	<!-- <script src="./js/modernizr-2.5.3-min.js"></script> -->
+
+	<style type="text/css">
+
+	/*  THIS IS JUST TO GET THE GRID TO SHOW UP.  YOU DONT NEED THIS IN YOUR CODE */
+
+	
+	#tunePlayer_SWF{
+		height: 0;
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+<!-- <div id="skiptomain"><a href="#maincontent">skip to main content</a></div> -->
+
+<div id="wrapper">
+	<div id="headcontainer">
+		<header>
+		<h1></h1>
+		<h3>Gaana Demo App</h3>
+		<p class="introtext">You're gonna have to view the demo to use Gaana API's code here.</p>
+		</header>
+	</div>
+	<div id="maincontentcontainer">
+		<div id="maincontent">
+			<ul>
+				<li><a id="tabn1" href="#song">Songs</a></li>
+				<li><a id="tabn2" href="#album">Album</a></li>
+				<li><a id="tabn3" href="#artist">Artist</a></li>
+				<li><a id="tabn4" href="#playlist">Playlist</a></li>
+			</ul>
+
+			<div id="song">
+			</div>
+
+			<div id="album">
+			</div>
+
+			<div id="artist">
+			</div>
+
+			<div id="playlist">
+			</div>
+		</div>
+	</div>
+	<div id="footercontainer">
+		<footer class="group">
+			<div class="col span_1_of_4">
+			</div>
+			<div class="col span_1_of_4">
+			</div>
+			<div class="col span_1_of_4">
+			</div>
+			<div class="col span_1_of_4">
+			</div>
+
+   			<br class="breaker" />
+
+			<div id="smallprint">
+			</div>
+
+		</footer>
+	</div>
+</div>
+<div class="row-fluid hotbox mainPlayer" id="mainPlayer" >
+<div class="playersongimg">
+<a href="javascript:void(0);" class="thumbHolder">
+
+</a>
+&nbsp;
+</div>
+<div class="playersongcontrol">
+<div class="player_wrapper align-center">
+<div class="span4 back" ><a href="javascript:void(0)" class="spritePlayer prev previous tiptip" title="Previous"></a></div>
+<div class="span4 start" ><a href="javascript:void(0)" class="spritePlayer playPause play" title="Play">
+<span class="spritePlayer loaderCircle tiptip" title="loading..."></span>
+</a></div>
+<div class="span4 move" ><a href="javascript:void(0)" class="spritePlayer next tiptip" title="Next"></a></div>
+</div>
+</div>
+<div class="playercontrol">
+<div class="player_controller clearfix">
+<div class="song-title1">
+<div class="white inline-block" id="trackInfo"></div>
+<div class="radio_tool">
+<div class="inline-block ft_rt" id="shuffle"><a href="javascript:void(0)" class="spritePlayer shuffle tiptip" title="Shuffle is off"></a></div>
+<div class="inline-block ft_rt" id="repeat"><a href="javascript:void(0)" class="spritePlayer repeat tiptip repeatAll" title="Repeat"><span class="repeat1">1</span></a></a></div>
+</div >
+
+ 
+</div>
+<div style="padding:0 60px; top:10px; position:relative;" class="clearfix">
+<div class="time startime a-d white"></div>
+<div class="songseek slide" ><span class="fl loader tiptip" title="Loading...">Loading...</span></div>
+<div class="total endtime a-d white"></div>
+</div>
+</div>
+</div>
+<div class="wttodo control_blk social">
+<div class="circle1"></div>
+<div class="large-resolution1">
+<div class="cmt control_blk1 a1"><a href="javascript:void(0)" data-type="favp" id="favorite" class="favorite" title="Favorite"></a></div>
+<div class="cmt control_blk1 a2"><a href="javascript:void(0)" data-type="addtopp" id="createnew" title="Add To Playlist"></a></div>
+<div class="cmt control_blk1 a3"><a href="javascript:void(0)" data-type="sharep" id="forward" title="Share" class="player_share"></a></div>
+</div>
+</div>
+<div class="volumesettings control_blk1">
+<a href="javascript:void(0)" class="mute" id="volume" title="Mute"></a>
+<div id="volum" class="ft_rt"><div class="volumeseek songSeekbar"></div></div>
+</div>
+<div class="control_blk songadded control_blk1">
+<a href="javascript:void(0)" id="songlist" class="addedlist"></a>
+<a href="javascript:void(0)" class="songcnt addedlist a-d white"></a>
+<div class="scroll-pane addedsonglist player-control">
+ 
+</div>
+</div>
+<!--
+<div class="control_blk kbps_setting">
+<a href="javascript:void(0)" id="settings_player"></a>
+</div>-->
+<div class="rgtSeprator control_blk1">
+<a href="javascript:void(0)" class="radio tiptip" title="Start Your Own Radio With This Song" id="radio"><span class="radioIcon"></span></a>
+</div>
+ 
+ 
+</div>
+
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="./js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="js/selectivizr-min.js"></script>
+	<![endif]-->
+
+
+	<!-- More Scripts-->
+	<!-- // <script src="./js/responsivegridsystem.js"></script> -->
+	<script language="javascript">
+	var BASE_URL = window.location.href.replace("index.html" ,"");
+	var TMStaticUrl = BASE_URL;
+	var playerSwf = BASE_URL + "swf/GaanaPlayerV2_v53.swf";
+		TMUrl = BASE_URL;
+	</script>	
+	<script type="text/javascript" src="./js/jquery.json.js"></script>
+	<script type="text/javascript" src="./js/jsPlayerSWFObject.js"></script>
+	<script type="text/javascript" src="./js/jsPlayerLayout.js"></script>
+	<script type="text/javascript" src="./js/jsPlayer.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+</html>

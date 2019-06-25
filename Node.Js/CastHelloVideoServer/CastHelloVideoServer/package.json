@@ -1,0 +1,10 @@
+{
+  "name": "CastHelloVideoServer",
+  "version": "0.0.0",
+  "description": "CastHelloVideoServer",
+  "main": "server.js",
+  "author": {
+    "name": "roger.pereira",
+    "email": ""
+  }
+}
